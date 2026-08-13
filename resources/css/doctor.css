@@ -6,7 +6,6 @@
   height: 100%;
 }
 .list-container{
-    /* border: 2px solid black; */
     border-radius: 10px;
     margin: 10px 55px;
     background-color: #A5B99A;
@@ -44,7 +43,13 @@
 .doctor-card>p{
     font-size: 18px;
 }
-
-
-/* CREATE PAGE CSS */
+.ed-btns {
+    display: flex;
+    flex-direction: column;
+}
+.ed-btns>button {
+    width: 50px;
+    margin: 2px;
+    
+}
 

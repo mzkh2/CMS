@@ -6,6 +6,6 @@
     <input type="string" id="fee" name="fee" maxlength="8">
     <h4>Qualifications</h4>
     <input type="string" autocomplete="off" id="qualifications" name="qualifications" maxlength="10">
-    <button type="sumbit" href="/adddoctor">Add Doctor</button>
+    <button type="submit" href="/adddoctor">Add Doctor</button>
 </form>
 <button><a href="/doctors">Cancel</a></button>

@@ -29,4 +29,24 @@ class DocController extends Controller
         ]);
         return redirect('/doctors');
     }
+    public function destroy(Doctor $doctor){
+        $doctor->delete();
+        return redirect('/doctors');
+    }
+
+
+    public function edit(Doctor $doctor){
+        return view('crud_pages.editDoctor',compact('doctor'));
+    }
+    
+    
+    public function save(Request $request, Doctor $doctor){
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:20',
+            'fee' => 'required|string|max:8',
+            'qualifications' => 'required|string|max:10',
+        ]);
+        $doctor->update($validatedData);
+        return redirect('/doctors');
+    }
 }

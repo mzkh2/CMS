@@ -11,6 +11,17 @@
                         <h3>Name of the Doctor: {{ $doctor->name }}</h3>
                         <p>Fee: {{ $doctor->fee }}</p>
                         <p>Qualifications : {{ $doctor->qualifications }}
+                        <div class="ed-btns">
+                            
+                            <form method="POST" action="/doctor/{{ $doctor->id }}/delete">
+                                @csrf
+                                @method('DELETE')
+                                <button type="sumbit">delete</button>
+                            <form>
+
+                            <button><a href="/doctor/{{ $doctor->id }}/edit">Edit</a></buttom>
+
+                        </div>
                     </div>
                 @endforeach
             </div>

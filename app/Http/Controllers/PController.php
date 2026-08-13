@@ -29,5 +29,24 @@ class PController extends Controller
         
         return redirect('/patients');
     }
+    public function destroy(Patient $patient){
+        $patient->delete();
+        return redirect('/patients');
+    }
+
+    public function edit(Patient $patient){
+        return view('crud_pages.editPatient',compact('patient'));
+    }
+
+    public function save (Request $request, Patient $patient){
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:20',
+            'age' => 'required|integer|min:0|max:100',
+            'sickness' => 'required|string|max:25'
+        ]);
+        $patient->update($validatedData);
+        return redirect('/patients');
+    }
+
 }
 
