@@ -25,6 +25,7 @@ class PController extends Controller
             'name' => $validatedData['name'],
             'age' => $validatedData['age'],
             'sickness' => $validatedData['sickness'],
+            'user_id' => auth()->id()
         ]);
         
         return redirect('/patients');

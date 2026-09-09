@@ -4,11 +4,22 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DocController;
 use App\Http\Controllers\Appointmentcontroller;
 use App\Http\Controllers\PController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+
+// LOGING & REGISTER ROUTES   
+
+Route::view('/register', 'auth.register');
+Route::post('/register/user',[UserController::class,'register']);
+
+Route::post('/logout',[UserController::class,'logout']);
+
+Route::view('/login', 'auth.login');
+Route::post('/login', [UserController::class, 'login']);
 
 // ROUTES FOR DOCTOR
 Route::get('/doctors', [DocController::class, 'index']);

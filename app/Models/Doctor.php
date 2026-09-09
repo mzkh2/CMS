@@ -10,5 +10,6 @@ class Doctor extends Model
     'name',
     'fee',
     'qualifications',
+    'user_id'
     ];
 }

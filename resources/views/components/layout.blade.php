@@ -9,9 +9,13 @@
     <body class="layout-body-container">
         <header class="header-container">
             <div class="header">
-                {{-- <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <label for="menu-toggle" class="fa fa-bars" aria-hidden="true"></label> --}}
-                <h1 class="header-txt">CMS</h1>
+
+                <form class="logout-form" method="POST" action="/logout">
+                    @csrf
+                    <h1 class="header-txt">CMS</h1>
+                    <button type="submit" class="logout-btn">Logout</button>
+                </form>
+                
             </div>
         </header>
         <main class="layout-container">

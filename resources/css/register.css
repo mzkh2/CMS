@@ -1,0 +1,63 @@
+.register-body {
+    background-color: #f1f2f6;
+    /* color: rgb(255, 255, 255); */
+    min-height: 100vh;
+}
+.register-header h1{
+    font-size: 30px;
+    font-family: 'Georgia';
+}
+.register-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 200px;
+    padding: 60px 10px;
+    background-color: #b0d8e3;
+    border-radius: 10px;
+}
+.register-form {
+    background-color: #f1f2f6;
+    border: #555555 1px solid;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+.register-input {
+    padding: 5px;
+    margin: 5px 0px;
+    border: 1px solid #ccc;
+}
+.register-header{
+    text-align: center;
+    width: 600px;
+}
+.register-form h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.register-input-area{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+.register-btn{
+    background-color: 	#0e3768;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 20px;
+}
+form h1{
+    font-size: 20px;
+    font-family: 'Georgia';
+    margin-top: 10px;
+}
+.register-input-area label{
+    font-size: 15px;
+    font-family: 'Georgia';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

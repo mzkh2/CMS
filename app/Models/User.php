@@ -6,6 +6,8 @@ namespace App\Models;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\Doctor;
+use App\Models\Patient;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
@@ -45,5 +47,11 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+    public function doctors(){
+        return $this->hasMany(Doctor::class);
+    }
+    public function patientss(){
+        return $this->hasMany(Patient::class);
     }
 }

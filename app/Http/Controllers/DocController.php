@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Doctor;
 use Illuminate\Http\Request;
-
 class DocController extends Controller
 {
 
@@ -26,6 +25,7 @@ class DocController extends Controller
             'name' => $validatedData['name'],
             'fee' => $validatedData['fee'],
             'qualifications' => $validatedData['qualifications'],
+            'user_id' => auth()->id(),
         ]);
         return redirect('/doctors');
     }
