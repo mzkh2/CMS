@@ -6,7 +6,7 @@ use App\Models\Doctor;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
-class Userpolicy
+class Doctorpolicy
 {
     /**
      * Determine whether the user can view any models.

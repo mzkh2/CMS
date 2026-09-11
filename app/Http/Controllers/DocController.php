@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Doctor;
+use Illuminate\Auth\Access\Gate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
+
 class DocController extends Controller
 {
 
@@ -30,6 +33,7 @@ class DocController extends Controller
         return redirect('/doctors');
     }
     public function destroy(Doctor $doctor){
+        Gate::authorize('delete', $doctor);
         $doctor->delete();
         return redirect('/doctors');
     }

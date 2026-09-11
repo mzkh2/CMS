@@ -17,7 +17,7 @@
                 <p>or click <a href="/login">here</a> to login</p>
             </header>    
 
-            <form class="register-form" action="/register/user" method="POST">
+            <form class="register-form" action="/register" method="POST">
                 @csrf
                 <h1>Create an Account</h1>
                 <div class="register-input-area">

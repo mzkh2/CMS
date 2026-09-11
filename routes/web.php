@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DocController;
-use App\Http\Controllers\Appointmentcontroller;
+use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\PController;
 use App\Http\Controllers\UserController;
 
@@ -14,7 +14,7 @@ Route::get('/', function () {
 // LOGING & REGISTER ROUTES   
 
 Route::view('/register', 'auth.register');
-Route::post('/register/user',[UserController::class,'register']);
+Route::post('/register',[UserController::class,'register']);
 
 Route::post('/logout',[UserController::class,'logout']);
 
@@ -46,9 +46,9 @@ Route::post('/save/patient/{patient}',[PController::class,'save']); //  EDIT
 
 // ROUTES FOR APPOINTMENT
 
-Route::get('/appointments', [Appointmentcontroller::class, 'index']);
-Route::get('/appointment/create', [Appointmentcontroller::class, 'getData']);
-Route::post('/addappointment', [Appointmentcontroller::class, 'create']);
+Route::get('/appointments', [AppointmentController::class, 'index']);
+Route::get('/appointment/create', [AppointmentController::class, 'getData']);
+Route::post('/addappointment', [AppointmentController::class, 'create']);
 Route::delete('/appointment/{appointment}/delete',[AppointmentController::class,'destroy']); //  DELETE
 
 // Route::get('/appointment/{appointment}/edit', [AppointmentController::class,'edit']); //  EDIT
